@@ -1,5 +1,7 @@
 # Tasuke
 
+![Build CI](https://github.com/nthnn/tasuke/actions/workflows/build_ci.yml/badge.svg)
+
 Tasuke is a customizable personal computer assistant that utilizes AI voice command recognition to help automate tasks and provide a more interactive computing experience. This project uses Google Text-to-Speech (gTTS), Pygame for audio playback, and the SpeechRecognition library for capturing and transcribing voice commands.
 
 - **Voice Command Recognition**: Uses Google's speech recognition API to transcribe voice commands.
@@ -57,7 +59,7 @@ To run Tasuke from source, follow these steps to ensure all dependencies are ins
 
 3. **Configuration File** - Tasuke uses a JSON configuration file to define the voice commands it recognizes and the corresponding actions it performs. Create the configuration file at `/etc/tasuke/conf.d/commands.json` with the following content:
 
-    ```json
+    ```js
     [
       [
         ["what's the date today"],  // Speech transcriptions
