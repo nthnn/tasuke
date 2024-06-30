@@ -18,6 +18,7 @@
 
 mkdir -p dist/tasuke_0.1.0-1_any/usr/bin
 mkdir -p dist/tasuke_0.1.0-1_any/etc/tasuke/conf.d
+mkdir -p dist/tasuke_0.1.0-1_any/tmp/tasuke
 mkdir -p dist/tasuke_0.1.0-1_any/DEBIAN
 
 touch dist/tasuke_0.1.0-1_any/DEBIAN/control
