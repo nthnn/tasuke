@@ -1,0 +1,28 @@
+name: Build CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Python 3.12.3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.3'
+
+      - name: APT Dependencies
+        run: sudo apt install python3-full libespeak-dev portaudio19-dev python3-pyaudio
+
+      - name: Python libraries
+        run: pip install SpeechRecognition pyaudio gtts pygame setuptools --break-system-packages
+
+      - name: Build
+        run: ./build.sh
+
+      - name: Output Check
+        run: ls dist
