@@ -30,11 +30,12 @@ from gtts import gTTS
 from pygame import mixer
 
 def text_to_speech(text):
+    tmp3 = "/tmp/tasuke/temp.mp3"
     tts = gTTS(text=text, lang='en', slow=False)
-    tts.save("temp.mp3")
+    tts.save(tmp3)
 
     mixer.init()
-    mixer.music.load("temp.mp3")
+    mixer.music.load(tmp3)
     mixer.music.play()
 
     while mixer.music.get_busy():
